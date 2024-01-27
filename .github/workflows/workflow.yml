@@ -153,4 +153,4 @@ jobs:
           echo "version=${version}" >> "${GITHUB_OUTPUT}"
           echo "package-name=${package_name}" >> "${GITHUB_OUTPUT}"
           echo "dist-tags=${{ inputs.dist-tags }}" >> "${GITHUB_OUTPUT}"
-          echo "link=${links_json}" >> "${GITHUB_OUTPUT}"
+          echo "links=${links_json}" >> "${GITHUB_OUTPUT}"
