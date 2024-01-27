@@ -143,7 +143,7 @@ jobs:
           done
           
           # Generate links.
-          declare -a links_text=()
+          declare -a links_text=("[${package_name}@${version}](https://www.npmjs.com/package/${package_name}/v/${version})")
           for dist_tag in ${dist_tags[@]}; do
             links_text+=("[${package_name}@${dist_tag}](https://www.npmjs.com/package/${package_name}/v/${dist_tag})")
           done
