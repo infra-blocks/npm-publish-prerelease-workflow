@@ -1,4 +1,6 @@
-# github-actions-workflow-template
+# npm-publish-prerelease-workflow
+[![Git Tag Semver From Label](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/git-tag-semver-from-label.yml/badge.svg)](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/git-tag-semver-from-label.yml)
+[![Update From Template](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml/badge.svg)](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml)
 
 This workflow publishes prerelease NPM packages based the provided increment type input. The supported input
 values are "premajor", "preminor" and "prepatch".
