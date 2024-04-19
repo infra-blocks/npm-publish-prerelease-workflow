@@ -23,10 +23,11 @@ then the version bump will result in "0.2.0-alpha.13".
 
 ## Inputs
 
-|   Name    | Required | Description                                                                                                                                                   |
-|:---------:|:--------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   type    |   true   | The prerelease type. Either "premajor", "preminor", or "prepatch"                                                                                             |
-| dist-tags |   true   | A stringified JSON array of the dist-tags to apply. Because we are publishing prereleases, this is required and it *shouldn't include the "latest" dist-tag*. |
+|   Name    | Required | Description                                                                                                                                                               |
+|:---------:|:--------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   type    |   true   | The prerelease type. Either "premajor", "preminor", or "prepatch"                                                                                                         |
+| dist-tags |   true   | A stringified JSON array of the dist-tags to apply. Because we are publishing prereleases, this is required and it *shouldn't include the "latest" dist-tag*.             |
+|   skip    |  false   | A boolean indicating whether to skip whether to skip the workflow. This is to workaround the required checks path issue when workflows are skipped. It defaults to false. |
 
 ## Secrets
 
