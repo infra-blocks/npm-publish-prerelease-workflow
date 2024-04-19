@@ -11,6 +11,11 @@ on:
         type: string
         description: A stringified JSON array of the dist-tags to apply.
         required: true
+      skip:
+        type: boolean
+        description: Whether to skip the workflow or not.
+        required: false
+        default: false
     secrets:
       npm-token:
         description: The NPM token required to publish the package.
@@ -38,6 +43,7 @@ permissions:
 
 jobs:
   npm-publish-prerelease:
+    if: ${{ !inputs.skip }}
     runs-on: ubuntu-22.04
     outputs:
       package-name: ${{ steps.npm-publish.outputs.package-name }}
