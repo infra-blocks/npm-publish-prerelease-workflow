@@ -2,6 +2,7 @@
 [![Git Tag Semver From Label](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/git-tag-semver-from-label.yml/badge.svg)](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/git-tag-semver-from-label.yml)
 [![Update From Template](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml/badge.svg)](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml)
 
+<<<<<<< HEAD
 This workflow publishes prerelease NPM packages based the provided increment type input. The supported input
 values are "premajor", "preminor" and "prepatch".
 
@@ -20,6 +21,18 @@ used in publication. That's "0.2.0-alpha.0" in our example.
 When the lineage does exist, then we find the latest version and run a semantic prerelease increment on it. The
 result version is the one used for publication. For example, if the latest prerelease version is "0.2.0-alpha.12",
 then the version bump will result in "0.2.0-alpha.13".
+=======
+This repository is a template for creating reusable GitHub Actions Workflows. Go through the below checklist
+upon instantiating this template:
+- Remove the [trigger update from template workflow](.github/workflows/trigger-update-from-template.yml)
+- Edit the content of [the placeholder](.github/workflows/workflow.yml) for your reusable workflow.
+- Update the status badges:
+    - Remove the `Trigger Update From Template` status badge.
+    - Add the `Update From Template` status badge.
+    - Rename the rest of the links to point to the right repository.
+- Edit this document and update the relevant sections
+- Prepare the [changelog](CHANGELOG.md) for the first version of the module that will be released.
+>>>>>>> template/master
 
 ## Inputs
 
