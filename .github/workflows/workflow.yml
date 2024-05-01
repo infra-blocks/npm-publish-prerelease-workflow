@@ -42,8 +42,12 @@ permissions:
   contents: read
 
 jobs:
+<<<<<<< HEAD
   npm-publish-prerelease:
     if: ${{ !inputs.skip }}
+=======
+  example-job:
+>>>>>>> template/master
     runs-on: ubuntu-22.04
     outputs:
       package-name: ${{ steps.npm-publish.outputs.package-name }}
@@ -51,7 +55,16 @@ jobs:
       dist-tags: ${{ steps.npm-publish.outputs.dist-tags }}
       links: ${{ steps.npm-publish.outputs.links }}
     steps:
+<<<<<<< HEAD
       - name: Parse inputs
+=======
+      # This condition should be on every step.
+      - if: ${{ !inputs.skip }}
+        id: example-step
+        name: Example step
+        env:
+          BIG_SECRET: ${{ secrets.example-secret }}
+>>>>>>> template/master
         run: |
           allowed_versions=(premajor preminor prepatch)
           if test -z "$(echo ${allowed_versions[@]} | fgrep -w "${{ inputs.type }}")"; then
