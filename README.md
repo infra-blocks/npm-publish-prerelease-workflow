@@ -1,6 +1,6 @@
 # npm-publish-prerelease-workflow
-[![Release](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/release.yml/badge.svg)](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/release.yml)
-[![Update From Template](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml/badge.svg)](https://github.com/infrastructure-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml)
+[![Release](https://github.com/infra-blocks/npm-publish-prerelease-workflow/actions/workflows/release.yml/badge.svg)](https://github.com/infra-blocks/npm-publish-prerelease-workflow/actions/workflows/release.yml)
+[![Update From Template](https://github.com/infra-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml/badge.svg)](https://github.com/infra-blocks/npm-publish-prerelease-workflow/actions/workflows/update-from-template.yml)
 
 This workflow publishes prerelease NPM packages based the provided increment type input. The supported input
 values are "premajor", "preminor" and "prepatch".
@@ -33,7 +33,7 @@ then the version bump will result in "0.2.0-alpha.13".
 
 |   Name    | Required | Description                                                                                                                                                                      |
 |:---------:|:--------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| npm-token |   true   | The NPM token used to publish the package. This is passed as the NPM_TOKEN environment variable. See [ts-lib-template](https://github.com/infrastructure-blocks/ts-lib-template) |
+| npm-token |   true   | The NPM token used to publish the package. This is passed as the NPM_TOKEN environment variable. See [ts-lib-template](https://github.com/infra-blocks/ts-lib-template) |
 
 ## Outputs
 
@@ -73,7 +73,7 @@ permissions:
 
 jobs:
   npm-publish-prerelease:
-    uses: infrastructure-blocks/npm-publish-prerelease-workflow/.github/workflows/workflow.yml@v1
+    uses: infra-blocks/npm-publish-prerelease-workflow/.github/workflows/workflow.yml@v1
     permissions:
       contents: read
     with:
@@ -86,4 +86,4 @@ jobs:
 ### Releasing
 
 The releasing is handled at git level with semantic versioning tags. Those are automatically generated and managed
-by the [git-tag-semver-from-label-workflow](https://github.com/infrastructure-blocks/git-tag-semver-from-label-workflow).
+by the [git-tag-semver-from-label-workflow](https://github.com/infra-blocks/git-tag-semver-from-label-workflow).
