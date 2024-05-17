@@ -84,7 +84,7 @@ jobs:
       - if: ${{ !inputs.skip }}
         name: Get prerelease lineage
         id: semver-increment
-        uses: docker://public.ecr.aws/infrastructure-blocks/semver-increment-action:v1
+        uses: docker://public.ecr.aws/infra-blocks/semver-increment-action:v1
         with:
           version: ${{ steps.get-package-info.outputs.package-version }}
           type: ${{ inputs.type }}
@@ -125,7 +125,7 @@ jobs:
       - if: ${{ !inputs.skip && steps.check-lineage-exists.outputs.exists == 'true' }}
         name: Bump lineage latest prerelease
         id: bump-lineage-latest
-        uses: docker://public.ecr.aws/infrastructure-blocks/semver-increment-action:v1
+        uses: docker://public.ecr.aws/infra-blocks/semver-increment-action:v1
         with:
           version: ${{ steps.check-lineage-exists.outputs.lineage-latest }}
           type: prerelease
